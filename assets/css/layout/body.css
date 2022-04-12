@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+body {
+  /* 定義文字間距，本屬性會對子階層產生影響 */
+  letter-spacing: 2px;
+  /* 定義使用字體，本屬性會對子階層產生影響 */
+  font-family: 'Exo', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
+  /* 定義文字的行高，本屬性會對子階層產生影響 */
+  line-height: 1.5;
+}

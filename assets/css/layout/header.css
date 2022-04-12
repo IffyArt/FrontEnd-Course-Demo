@@ -1,0 +1,36 @@
+.header {
+  /* 定義本區塊為彈性容器 */
+  display: flex;
+  /* 定義彈性容器內副軸至中 */
+  align-items: center;
+  /* 定義彈性容器內為直列顯示 */
+  flex-direction: column;
+  /* 定義彈性容器內主軸至中 */
+  justify-content: center;
+  /* 設定本容器的高度，vh 為視窗的高度 */
+  height: 80vh;
+  /* 定義背景圖片，這邊使用連結方式引入 images 內的圖檔 */
+  background-image: url('../../images/home-image.png');
+  /* 背景的定位方式進行至中處理 */
+  background-position: center;
+  /* 背景尺寸採用自動滿版的模式 */
+  background-size: cover;
+}
+
+.header__container {
+  /* 設定本區塊的寬度最多為 600px */
+  max-width: 600px;
+  /* 定義內容文字顏色 */
+  color: white;
+  /* 設定內容文字顯示方式，center 為至中顯示 */
+  text-align: center;
+}
+
+.header__title {
+  /* 單獨設定區塊靠下的行距 */
+  margin-bottom: 1rem;
+  /* 定義內容文字顏色 */
+  color: #fff3c7;
+  /* 設定文字大小 rem 代表當下 html 設定的 px */
+  font-size: 2.5rem;
+}
