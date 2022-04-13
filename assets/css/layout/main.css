@@ -1,4 +1,56 @@
 .main {
   /* 定義本區塊為彈性容器 */
   display: flex;
+  flex-direction: column;
+}
+
+.main__row {
+  display: flex;
+}
+
+.main__row--dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.main__container {
+  display: inline-flex;
+  align-items: center;
+  margin: auto;
+  padding: 5rem 0;
+  max-width: 1200px;
+  width: 80%;
+}
+
+.main__title {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.main__text-aside {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.main__image-demo {
+  display: grid;
+  flex: 1;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+.main__image-demo > li {
+  display: inline-flex;
+  overflow: hidden;
+  align-items: center;
+  max-height: 180px;
+}
+
+.main__image-demo > li:nth-child(3) {
+  grid-column: span 2 / auto;
+}
+
+.main__image-demo img {
+  width: 100%;
 }
