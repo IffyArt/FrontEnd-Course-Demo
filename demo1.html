@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+        background-size: 180% 180%;
+        animation: gradient-animation 18s ease infinite;
+      }
+
+      @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .btn {
+        /* 定位方式為相對定位 */
+        position: relative;
+        /* 隱藏元素外的內容 */
+        overflow: hidden;
+        box-sizing: border-box;
+        /* 設定元素靠內的距離 */
+        padding: 1rem 2rem;
+        /* 設定元素邊線的樣式 */
+        border: 1px solid white;
+        /* 給四個角圓角的參數 */
+        border-radius: 10px;
+        color: bisque;
+        /* 負責漸變影格設定 */
+        transition: 300ms;
+      }
+
+      .btn:hover {
+        color: #2a59a5;
+      }
+
+      .btn::before {
+        /* 定位方式為絕對定位 */
+        position: absolute;
+        /* 定位到參考值最上方 */
+        top: 0;
+        /* 定位到參考值最右邊 */
+        left: -105%;
+        /* 決定在 z 軸的位子 */
+        z-index: -1;
+        /* 填滿寬度 */
+        width: 105%;
+        /* 填滿高度 */
+        height: 100%;
+        background-color: white;
+        /* 給予內容 */
+        content: '';
+        /* 負責漸變影格設定 */
+        transition: 300ms;
+      }
+
+      .btn:hover::before {
+        left: 0;
+      }
+
+      .link {
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 1rem 2rem;
+        border: white solid 1px;
+        color: white;
+        font-size: 2rem;
+        transition: color 300ms ease-in;
+      }
+
+      .link::before,
+      .link::after,
+      .link > span::before,
+      .link > span::after {
+        position: absolute;
+        top: 0;
+        top: 100%;
+        left: 0;
+        z-index: -1;
+        width: 25%;
+        height: 100%;
+        background-color: white;
+        content: '';
+        transition: top 300ms ease-out;
+      }
+      .link::after {
+        top: -100%;
+        left: 25%;
+      }
+      .link > span::before {
+        left: 50%;
+      }
+      .link > span::after {
+        top: -100%;
+        left: 75%;
+      }
+
+      .link:hover {
+        color: #2a59a5;
+      }
+
+      .link:hover::before,
+      .link:hover::after,
+      .link:hover > span::before,
+      .link:hover > span::after {
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <a href="#" class="btn">BUTTON</a> -->
+    <a class="link"><span>Click Me!fff</span></a>
+  </body>
+</html>
