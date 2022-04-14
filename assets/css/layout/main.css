@@ -22,6 +22,12 @@
   width: 80%;
 }
 
+@media screen and (max-width: 556px) {
+  .main__container {
+    flex-direction: column;
+  }
+}
+
 .main__title {
   margin-bottom: 10px;
   font-size: 2.2rem;
@@ -30,6 +36,12 @@
 .main__text-aside {
   flex: 1;
   margin-right: 2rem;
+}
+
+@media screen and (max-width: 556px) {
+  .main__text-aside {
+    margin-bottom: 2rem;
+  }
 }
 
 .main__image-demo {

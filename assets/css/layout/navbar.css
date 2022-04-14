@@ -58,3 +58,11 @@
   /* 定義內容文字顏色 */
   color: #101109;
 }
+
+/* 在手機版的尺寸之下隱藏導覽列連結與按鈕 */
+@media screen and (max-width: 556px) {
+  .navbar__link,
+  .navbar__button {
+    display: none;
+  }
+}
