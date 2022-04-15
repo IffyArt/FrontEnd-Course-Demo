@@ -35,7 +35,7 @@
 
 .main__text-aside {
   flex: 1;
-  margin-right: 2rem;
+  margin: 0 2rem;
 }
 
 @media screen and (max-width: 556px) {

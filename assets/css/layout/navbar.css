@@ -60,6 +60,16 @@
 }
 
 /* 在手機版的尺寸之下隱藏導覽列連結與按鈕 */
+@media all and (max-width: 966px) {
+  .navbar a {
+    margin-left: 0.5rem;
+  }
+  .navbar__link,
+  .navbar__button {
+    font-size: 0.9rem;
+  }
+}
+
 @media screen and (max-width: 556px) {
   .navbar__link,
   .navbar__button {
